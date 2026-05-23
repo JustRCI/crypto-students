@@ -147,7 +147,7 @@ export default function SignInPage() {
                     
                     <nav className="flex items-center space-x-12 w-full animate-fade-in-down z-10">
                         <Link href="/" className="max-[850px]:hidden">
-                            <img src="/img/icon.png" alt="Logo" className="h-24 md:h-32 w-auto" />
+                            <img src="/img/icon.png" alt="Logo" className="h-12 md:h-16 w-auto" />
                         </Link>
                         <div className="flex space-x-8">
                             <Link href="/" className="text-white font-bold text-sm hover:text-purple-300 transition-all tracking-wide">Home</Link>
@@ -165,7 +165,7 @@ export default function SignInPage() {
                     {/* Mobile Logo & Nav */}
                     <div className="md:hidden flex justify-center mb-8 pointer-events-auto">
                         <Link href="/">
-                            <img src="/img/icon.png" alt="Logo" className="h-24 w-auto" />
+                            <img src="/img/icon.png" alt="Logo" className="h-12 w-auto" />
                         </Link>
                     </div>
 

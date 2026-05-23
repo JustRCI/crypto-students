@@ -47,11 +47,11 @@ export default function ContactPage() {
     <div className="relative h-screen w-full flex flex-col md:flex-row overflow-hidden bg-[#0a051a] md:bg-[#d1d5db]">
       
       {/* Full-width Header */}
-      <header className="absolute top-0 left-0 w-full z-50 flex flex-col md:flex-row items-center justify-between px-6 md:px-12 py-4 md:py-5 animate-fade-in-down backdrop-blur-xl bg-[#0a051a]/70 md:bg-white/10 border-b border-white/10 md:border-white/20 shadow-[0_4px_30px_rgba(0,0,0,0.1)]">
+      <header className="absolute top-0 left-0 w-full z-50 flex flex-col md:flex-row items-center justify-between px-6 md:px-12 py-3 md:py-4 animate-fade-in-down backdrop-blur-md bg-white/5 border-b border-white/10 shadow-sm">
         <nav className="flex flex-col md:flex-row w-full items-center justify-between">
           <div className="flex items-center space-x-12">
             <Link href="/" className="hidden md:flex">
-              <img src="/img/icon.png" alt="Logo" className="h-24 md:h-32 w-auto" />
+              <img src="/img/icon.png" alt="Logo" className="h-12 md:h-16 w-auto" />
             </Link>
             
             <div className="hidden md:flex space-x-8">
@@ -95,7 +95,7 @@ export default function ContactPage() {
         
         <div className="md:hidden flex flex-col items-center justify-center mb-10 gap-4">
             <Link href="/">
-                <img src="/img/icon.png" alt="Logo" className="h-24 w-auto" />
+                <img src="/img/icon.png" alt="Logo" className="h-12 w-auto" />
             </Link>
             <Link href="/signin">
                 <button className="px-8 py-2 text-white font-semibold text-sm bg-transparent rounded-full border border-gray-400 text-center transition-all duration-300 ease-in-out hover:bg-transparent hover:border-purple-400 hover:shadow-[0_0_20px_5px_rgba(168,85,247,0.5)] hover:text-purple-400">
