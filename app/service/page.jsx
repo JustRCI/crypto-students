@@ -5,7 +5,7 @@ export default function ServicePage() {
     <div className="relative h-screen w-full flex flex-col md:flex-row overflow-hidden bg-[#0a051a] md:bg-[#d1d5db]">
       
       {/* Full-width Header */}
-      <header className="absolute top-0 left-0 w-full z-50 flex flex-col md:flex-row items-center justify-between px-6 md:px-12 py-6 md:py-8 animate-fade-in-down">
+      <header className="absolute top-0 left-0 w-full z-50 flex flex-col md:flex-row items-center justify-between px-6 md:px-12 py-4 md:py-5 animate-fade-in-down backdrop-blur-xl bg-[#0a051a]/70 md:bg-white/10 border-b border-white/10 md:border-white/20 shadow-[0_4px_30px_rgba(0,0,0,0.1)]">
         <nav className="flex flex-col md:flex-row w-full items-center justify-between">
           <div className="flex items-center space-x-12">
             <Link href="/" className="hidden md:flex">
