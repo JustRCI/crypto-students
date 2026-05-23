@@ -47,11 +47,11 @@ export default function ContactPage() {
     <div className="relative h-screen w-full flex flex-col md:flex-row overflow-hidden bg-[#0a051a] md:bg-[#d1d5db]">
       
       {/* Full-width Header */}
-      <header className="absolute top-0 left-0 w-full z-50 flex flex-col md:flex-row items-center justify-between px-6 md:px-12 py-3 md:py-4 animate-fade-in-down backdrop-blur-md bg-white/5 border-b border-white/10 shadow-sm">
+      <header className="absolute top-0 left-0 w-full z-50 flex flex-col md:flex-row items-center justify-between px-6 md:px-12 py-3 md:py-4 animate-fade-in-down">
         <nav className="flex flex-col md:flex-row w-full items-center justify-between">
           <div className="flex items-center space-x-12">
             <Link href="/" className="hidden md:flex">
-              <img src="/img/icon.png" alt="Logo" className="h-12 md:h-16 w-auto" />
+              <img src="/img/icon.png" alt="Logo" className="h-8 w-auto" />
             </Link>
             
             <div className="hidden md:flex space-x-8">
@@ -91,11 +91,14 @@ export default function ContactPage() {
       </div>
 
       {/* SISI KANAN: Form Contact (Get in Touch) */}
-      <div className="relative md:absolute md:right-0 w-full md:w-[50%] h-full flex flex-col pt-32 md:pt-40 pb-20 px-6 md:px-12 xl:pl-[12%] xl:pr-[7%] z-0 overflow-y-auto animate-fade-in-up bg-[#0a051a] md:bg-transparent">
+      {/* Efek Kaca Blur Khusus Sisi Kanan Desktop */}
+      <div className="hidden md:block absolute top-0 right-0 w-[50%] h-20 z-40 backdrop-blur-md bg-[#d1d5db]/60 border-b border-gray-300/50 shadow-[0_4px_30px_rgba(0,0,0,0.05)] pointer-events-none"></div>
+
+      <div className="relative md:absolute md:right-0 w-full md:w-[50%] h-full flex flex-col pt-24 md:pt-32 pb-20 px-6 md:px-12 xl:pl-[12%] xl:pr-[7%] z-0 overflow-y-auto animate-fade-in-up bg-[#0a051a] md:bg-transparent">
         
         <div className="md:hidden flex flex-col items-center justify-center mb-10 gap-4">
             <Link href="/">
-                <img src="/img/icon.png" alt="Logo" className="h-12 w-auto" />
+                <img src="/img/icon.png" alt="Logo" className="h-8 w-auto" />
             </Link>
             <Link href="/signin">
                 <button className="px-8 py-2 text-white font-semibold text-sm bg-transparent rounded-full border border-gray-400 text-center transition-all duration-300 ease-in-out hover:bg-transparent hover:border-purple-400 hover:shadow-[0_0_20px_5px_rgba(168,85,247,0.5)] hover:text-purple-400">
