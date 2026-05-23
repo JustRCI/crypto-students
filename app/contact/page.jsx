@@ -51,7 +51,7 @@ export default function ContactPage() {
         <nav className="flex flex-col md:flex-row w-full items-center justify-between">
           <div className="flex items-center space-x-12">
             <Link href="/" className="hidden md:flex">
-              <img src="/img/icon.png" alt="Logo" className="h-8 w-auto" />
+              <img src="/img/icon.png" alt="Logo" className="h-24 w-auto" />
             </Link>
             
             <div className="hidden md:flex space-x-8">
@@ -72,7 +72,7 @@ export default function ContactPage() {
 
           <div className="hidden md:flex items-center">
             <Link href="/signin">
-              <button className="px-8 py-2 text-white md:text-black font-semibold text-sm bg-transparent md:bg-[#d1d5db] rounded-full border border-gray-400 md:border-gray-600 text-center transition-all duration-300 ease-in-out hover:bg-transparent md:hover:bg-[#d1d5db] hover:border-purple-400 md:hover:border-purple-500 hover:shadow-[0_0_20px_5px_rgba(168,85,247,0.5)] hover:text-purple-400 md:hover:text-purple-600">
+              <button className="text-white md:text-black px-6 py-2 rounded-full font-bold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_5px_rgba(168,85,247,0.5)] bg-[#0a051a] md:bg-[#d1d5db] border border-white md:border-black">
                 Sign In
               </button>
             </Link>
@@ -96,10 +96,10 @@ export default function ContactPage() {
         
         <div className="md:hidden flex flex-col items-center justify-center mb-10 gap-4">
             <Link href="/">
-                <img src="/img/icon.png" alt="Logo" className="h-8 w-auto" />
+                <img src="/img/icon.png" alt="Logo" className="h-24 w-auto" />
             </Link>
             <Link href="/signin">
-                <button className="px-8 py-2 text-white font-semibold text-sm bg-transparent rounded-full border border-gray-400 text-center transition-all duration-300 ease-in-out hover:bg-transparent hover:border-purple-400 hover:shadow-[0_0_20px_5px_rgba(168,85,247,0.5)] hover:text-purple-400">
+                <button className="text-white px-6 py-2 rounded-full font-bold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_5px_rgba(168,85,247,0.5)] bg-[#0a051a] border border-white">
                     Sign In
                 </button>
             </Link>

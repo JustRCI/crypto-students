@@ -20,7 +20,7 @@ export default function Home() {
                 <img 
                   src="/img/icon.png" 
                   alt="Logo" 
-                  className="h-8 w-auto object-contain" 
+                  className="h-24 w-auto object-contain" 
                 />
               </Link>
 
