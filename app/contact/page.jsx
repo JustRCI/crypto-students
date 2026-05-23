@@ -72,7 +72,7 @@ export default function ContactPage() {
 
           <div className="hidden md:flex items-center">
             <Link href="/signin">
-              <button className="px-8 py-2 text-white md:text-black font-semibold text-sm bg-transparent rounded-full border border-gray-400 md:border-gray-600 text-center transition-all duration-300 ease-in-out hover:bg-transparent hover:border-purple-400 hover:shadow-[0_0_20px_5px_rgba(168,85,247,0.5)] hover:text-purple-400 md:hover:text-purple-600">
+              <button className="px-8 py-2 text-white md:text-black font-semibold text-sm bg-transparent md:bg-[#d1d5db] rounded-full border border-gray-400 md:border-gray-600 text-center transition-all duration-300 ease-in-out hover:bg-transparent md:hover:bg-[#d1d5db] hover:border-purple-400 md:hover:border-purple-500 hover:shadow-[0_0_20px_5px_rgba(168,85,247,0.5)] hover:text-purple-400 md:hover:text-purple-600">
                 Sign In
               </button>
             </Link>
@@ -91,8 +91,6 @@ export default function ContactPage() {
       </div>
 
       {/* SISI KANAN: Form Contact (Get in Touch) */}
-      {/* Efek Kaca Blur Khusus Sisi Kanan Desktop */}
-      <div className="hidden md:block absolute top-0 right-0 w-[50%] h-20 z-40 backdrop-blur-md bg-[#d1d5db]/60 border-b border-gray-300/50 shadow-[0_4px_30px_rgba(0,0,0,0.05)] pointer-events-none"></div>
 
       <div className="relative md:absolute md:right-0 w-full md:w-[50%] h-full flex flex-col pt-24 md:pt-32 pb-20 px-6 md:px-12 xl:pl-[12%] xl:pr-[7%] z-0 overflow-y-auto animate-fade-in-up bg-[#0a051a] md:bg-transparent">
         
