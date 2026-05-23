@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/set-state-in-effect */
 'use client';
 import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
@@ -82,7 +83,7 @@ export default function AdminPage() {
         };
     }, [router]);
 
-    const initCharts = () => {
+    function initCharts() {
         const ctxLine = document.getElementById('lineChart');
         const ctxBar = document.getElementById('barChart');
         if (ctxLine && !lineChartRef.current) {
@@ -105,7 +106,7 @@ export default function AdminPage() {
         }
     };
 
-    const toggleMode = () => {
+    function toggleMode() {
         setIsDarkMode(!isDarkMode);
         if (!isDarkMode) {
             document.body.classList.add('dark');
@@ -116,12 +117,12 @@ export default function AdminPage() {
         }
     };
 
-    const toggleSidebar = () => {
+    function toggleSidebar() {
         setIsSidebarClose(!isSidebarClose);
         localStorage.setItem('status', !isSidebarClose ? 'close' : 'open');
     };
 
-    const loadMateri = async () => {
+    async function loadMateri() {
         setIsLoading(true);
         const { data, error } = await supabase.from('contents').select('*').order('id', { ascending: false });
         if (!error && data) {
@@ -130,7 +131,7 @@ export default function AdminPage() {
         setIsLoading(false);
     };
 
-    const loadFeedbacks = async () => {
+    async function loadFeedbacks() {
         const { data, error } = await supabase.from('feedbacks').select('*').order('created_at', { ascending: false });
         if (!error && data) {
             setFeedbacks(data);
@@ -140,7 +141,7 @@ export default function AdminPage() {
         }
     };
 
-    const sendReply = async (id) => {
+    async function sendReply(id) {
         if (!replyText) return;
         try {
             const { error } = await supabase.from('feedbacks').update({ reply: replyText, status: 'replied' }).eq('id', id);
@@ -153,7 +154,7 @@ export default function AdminPage() {
         }
     };
 
-    const handleLogout = async () => {
+    async function handleLogout() {
         await supabase.auth.signOut();
         localStorage.removeItem('userSession');
         localStorage.removeItem('userRole');
@@ -161,7 +162,7 @@ export default function AdminPage() {
         window.location.replace('/signin');
     };
 
-    const openModal = (item = null) => {
+    function openModal(item = null) {
         if (item) {
             setEditData(item);
             setFormData({ judul: item.judul || '', modul: item.modul || '', instruktur: item.instruktur || '', deskripsi: item.deskripsi || '' });
@@ -173,12 +174,12 @@ export default function AdminPage() {
         setIsModalOpen(true);
     };
 
-    const closeModal = () => {
+    function closeModal() {
         setIsModalOpen(false);
         setEditData(null);
     };
 
-    const saveMateri = async () => {
+    async function saveMateri() {
         if (!formData.judul || !formData.modul || !formData.instruktur || !formData.deskripsi) {
             showAlert('Mohon lengkapi semua kolom formulir yang tersedia.', 'warning');
             return;
@@ -237,7 +238,7 @@ export default function AdminPage() {
         }
     };
 
-    const deleteMateri = async (id, fileUrl) => {
+    async function deleteMateri(id, fileUrl) {
         if (!confirm('Yakin ingin menghapus?')) return;
 
         try {

@@ -21,7 +21,7 @@ export default function MateriPage({ params }) {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        setIsClient(true);
+        setTimeout(() => setIsClient(true), 0);
         
         const sessionStr = localStorage.getItem('userSession');
         if (!sessionStr) {

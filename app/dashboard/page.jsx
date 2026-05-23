@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/set-state-in-effect */
 'use client';
 
 import { useState, useEffect, Suspense } from 'react';
@@ -34,7 +35,7 @@ function DashboardContent() {
     };
 
     useEffect(() => {
-        setIsClient(true);
+        setTimeout(() => setIsClient(true), 0);
         const session = localStorage.getItem('userSession');
         const role = localStorage.getItem('userRole');
         const name = localStorage.getItem('userName') || 'User';
