@@ -30,7 +30,7 @@ export default function AboutPage() {
 
           <div className="hidden md:flex items-center">
             <Link href="/signin">
-              <button className="px-8 py-2 text-white md:text-black font-semibold text-sm bg-transparent md:bg-[#d1d5db] rounded-full border border-gray-400 md:border-gray-600 text-center transition-all duration-300 ease-in-out hover:bg-transparent md:hover:bg-[#d1d5db] hover:border-purple-400 md:hover:border-purple-500 hover:shadow-[0_0_20px_5px_rgba(168,85,247,0.5)] hover:text-purple-400 md:hover:text-purple-600">
+              <button className="px-8 py-2 h-8 text-white md:text-black font-semibold text-sm bg-transparent md:bg-[#d1d5db] rounded-full border border-gray-400 md:border-gray-600 text-center transition-all duration-300 ease-in-out hover:bg-transparent md:hover:bg-[#d1d5db] hover:border-purple-400 md:hover:border-purple-500 hover:shadow-[0_0_20px_5px_rgba(168,85,247,0.5)] hover:text-purple-400 md:hover:text-purple-600">
                 Sign In
               </button>
             </Link>
