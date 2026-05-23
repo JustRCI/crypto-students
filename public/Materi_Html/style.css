@@ -1,0 +1,117 @@
+::-webkit-scrollbar {
+    width: 8px; /* Ukuran scrollbar dibuat tipis */
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; /* Landasan scrollbar transparan */
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(167, 139, 250, 0.2); /* Warna ungu transparan */
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(167, 139, 250, 0.5); /* Lebih terang saat disentuh */
+}
+
+/* Sembunyikan scrollbar untuk Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(167, 139, 250, 0.2) transparent;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Background gelap keunguan seperti di gambar */
+    background-color: #0b0e14; 
+    background-image: radial-gradient(circle at top right, #1a1b3a, #0b0e14);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    color: #e0e0e0;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    /* Background container semi-transparan gelap */
+    background: rgba(23, 25, 35, 0.8);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); /* Efek kaca (glassmorphism) */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+header h2 {
+    /* Warna gradasi ungu terang ke biru muda */
+    background: linear-gradient(to right, #a78bfa, #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #94a3b8;
+    font-size: 0.95em;
+}
+
+/* Mempercantik Iframe */
+.preview-card {
+    border: 1px solid rgba(167, 139, 250, 0.3);
+    border-radius: 15px;
+    overflow: hidden; 
+    background: #1e1e1e;
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.1);
+    position:relative;
+}
+
+iframe {
+    border: none;
+    display: block;
+    /* Memberikan filter sedikit agar tidak terlalu kontras putihnya jika PDF-nya putih */
+    width: calc(100% + 20px);
+    height: 600px;
+    filter: brightness(0.9);
+}
+
+/* Styling Tombol Download */
+.action-area {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn-download {
+    display: inline-block;
+    /* Gradasi ungu khas Crypto Student AI */
+    background: linear-gradient(135deg, #6d28d9 0%, #4f46e5 100%);
+    color: white;
+    padding: 14px 30px;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-download:hover {
+    background: linear-gradient(135deg, #7c3aed 0%, #6366f1 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.6);
+}
+
+.btn-download:active {
+    transform: translateY(-1px);
+}
